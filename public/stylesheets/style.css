@@ -1,8 +1,23 @@
 body {
-  padding: 50px;
+  padding: 0px;
+  margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.text-center{
+	text-align: center;
+}
+
+#map{
+    width: 800px;
+    height: 600px;
+    margin: 50px auto;
+}
+
+#acknowledge{
+	margin: 5px 30px;
 }

@@ -2,6 +2,11 @@ doctype html
 html
   head
     title= title
+    link(rel="stylesheet" href="/vendor/leaflet/leaflet.css")
     link(rel='stylesheet', href='/stylesheets/style.css')
+
   body
     block content
+
+    script(src="/vendor/leaflet/leaflet.js")
+    script(src="/scripts/main.js")

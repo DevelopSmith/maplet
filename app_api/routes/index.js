@@ -8,8 +8,9 @@ var auth = jwt({
 	userProperty: 'payload'
 });
 
-var ctrlUtility    = require('../utilities/utilities');
-var ctrlUser       = require('../controllers/user');
+var ctrlUtility = require('../utilities/utilities');
+var ctrlMap     = require('../controllers/map');
+var ctrlUser    = require('../controllers/user');
 
 // User
 router.get('/user/get-user', auth, ctrlUser.getUser);
@@ -22,6 +23,9 @@ router.post('/user/email-confirmation/:token', ctrlUser.emailConfirmation);
 router.post('/user/forgot-password', ctrlUser.forgotPassword);
 router.get('/user/reset/:token', ctrlUser.checkResetPassword);
 router.post('/user/reset/:token', ctrlUser.doResetPassword);
+
+router.get('/tiles/:z/:x/:y.png', ctrlMap.getTile);
+
 
 // authentication
 router.post('/register', passport.authenticate('local-register', {

@@ -1,5 +1,21 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1.text-center Maplet
+  h4.text-center Open source micro project
+
+  div#map
+
+  div#acknowledge
+    h4 Acknowledge
+    p This small project was made thanks to
+    ul
+      li
+        strong Leaflet: &nbsp;
+        a(href="https://leafletjs.com/") link
+      li
+        strong simpleTileServer: &nbsp;
+        a(href="https://github.com/johannesboyne/simpleTileServer") link
+      li
+        strong Automattic/node-canvas: &nbsp;
+        a(href="https://github.com/Automattic/node-canvas") link

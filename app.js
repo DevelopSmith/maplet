@@ -20,7 +20,7 @@ const routes = require('./app_server/routes/index');
 const routesApi = require('./app_api/routes/index');
 
 const app = express();
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT || '3600');
 app.set('port', port);
 
 const server = http.createServer(app);
